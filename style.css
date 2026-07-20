@@ -53,7 +53,6 @@ h1,h2,h3,.display{
   display:inline-block;
 }
 
-/* ---------- Header ---------- */
 header{
   position:sticky;top:0;z-index:20;
   background:var(--green);
@@ -89,7 +88,6 @@ header{
   .navtoggle{display:block;}
 }
 
-/* ---------- Hero ---------- */
 .hero{
   position:relative;
   padding:80px 0 70px;
@@ -113,13 +111,37 @@ header{
 .btn-outline{background:transparent;color:var(--green);border:2px solid var(--green);}
 .btn-outline:hover{background:var(--green);color:#fff;}
 
-/* ---------- Section labels ---------- */
+.cat-nav{
+  display:flex;gap:10px;flex-wrap:wrap;
+  padding:8px 0 8px;
+  position:sticky;top:74px;z-index:10;
+  background:var(--bg);
+}
+.cat-pill{
+  padding:9px 18px;border-radius:999px;font-weight:600;font-size:14px;
+  border:2px solid var(--line);color:var(--ink-soft);
+  transition:all .15s;display:inline-block;
+}
+.cat-pill.active,.cat-pill:hover{background:var(--terracotta);border-color:var(--terracotta);color:#fff;}
+
+.cat-section{padding-top:48px;scroll-margin-top:130px;}
+.cat-section h2{font-size:23px;display:flex;align-items:center;gap:10px;}
+.cat-section .count{
+  font-size:12.5px;font-weight:600;color:var(--ink-soft);
+  background:var(--line);padding:3px 10px;border-radius:999px;
+}
+.cat-section .post-grid{margin-top:20px;}
+.post-card.empty{
+  align-items:center;justify-content:center;text-align:center;
+  border-style:dashed;box-shadow:none;color:var(--ink-soft);
+  min-height:120px;
+}
+
 .section-head{
   display:flex;align-items:center;justify-content:space-between;
   margin:0 0 30px;padding-top:56px;
 }
 
-/* ---------- Post grid / cards ---------- */
 .post-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
 @media (max-width:720px){.post-grid{grid-template-columns:1fr;}}
 
@@ -148,7 +170,6 @@ header{
   display:flex;justify-content:space-between;
 }
 
-/* ---------- About strip ---------- */
 .about-strip{
   margin-top:64px;
   background:var(--green);
@@ -166,7 +187,6 @@ header{
 }
 .about-strip .back-link{color:var(--mustard);font-weight:600;}
 
-/* ---------- Footer ---------- */
 footer{
   background:var(--green);color:#D8D9C9;
   margin-top:80px;padding:40px 0;
@@ -175,7 +195,6 @@ footer{
 }
 footer a:hover{color:#fff;}
 
-/* ---------- Article page ---------- */
 .article-head{background:var(--green-soft);padding:64px 0 40px;}
 .article-head h1{font-size:clamp(30px,4.6vw,46px);max-width:18ch;margin-top:18px;color:var(--green);}
 .article-head .sub{margin-top:16px;color:var(--ink-soft);font-size:17px;max-width:56ch;}
